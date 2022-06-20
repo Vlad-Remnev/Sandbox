@@ -1,25 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Accordion from "./components/Accordion/Accordion";
+import Stars from "./components/Star/Star";
+
 
 function App() {
+    console.log('App render')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+          <Accordion titleVal = {'Меню'} collapse={false}/>
+          <Accordion titleVal = {'Список'} collapse={true}/>
+          {/*<Stars value = {3}/>*/}
+          {/*<Stars value = {1}/>*/}
+          {/*<Stars value = {0}/>*/}
+          {/*<Stars value = {10}/>*/}
+      </div>
   );
 }
 
