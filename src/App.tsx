@@ -11,10 +11,12 @@ function App() {
       <div className="App">
           <Accordion titleVal = {'Меню'} collapse={false}/>
           <Accordion titleVal = {'Список'} collapse={true}/>
-          {/*<Stars value = {3}/>*/}
-          {/*<Stars value = {1}/>*/}
-          {/*<Stars value = {0}/>*/}
-          {/*<Stars value = {10}/>*/}
+          <Stars value = {0}/>
+          <Stars value = {1}/>
+          <Stars value = {2}/>
+          <Stars value = {3}/>
+          <Stars value = {4}/>
+          <Stars value = {5}/>
       </div>
   );
 }

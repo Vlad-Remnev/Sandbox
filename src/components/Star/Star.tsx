@@ -1,71 +1,20 @@
 import React from "react";
 
-function Stars (props: any) {
+type StarsPropsType = {
+    value: 0 | 1 | 2 | 3 | 4 | 5
+}
+
+function Stars (props: StarsPropsType) {
     console.log('Stars render')
-    if (props.value === 1) {
         return (
             <div>
-                <Star selected={true}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
+                <Star selected={ props.value > 0 }/>
+                <Star selected={ props.value > 1 }/>
+                <Star selected={ props.value > 2 }/>
+                <Star selected={ props.value > 3 }/>
+                <Star selected={ props.value > 4 }/>
             </div>
         )
-    }
-    if (props.value === 2) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-            </div>
-        )
-    }
-    if (props.value === 3) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-            </div>
-        )
-    }
-    if (props.value === 4) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={false}/>
-            </div>
-        )
-    }
-    if (props.value === 5) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-            </div>
-        )
-    }
-    return (
-        <div>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-        </div>
-    )
 }
 
 
@@ -74,7 +23,7 @@ function Star(props : any) {
     if (props.selected === true) {
         return <span><b>Star -</b> <Instar /></span>
     } else {
-        return <span>Star -<Instar /></span>
+        return <span><i>Star -</i> <Instar /></span>
     }
 }
 
@@ -82,7 +31,7 @@ function Instar () {
     console.log('Instar render')
     return (
         <span>
-            - prosto
+            - prosto //
         </span>
     )
 }
