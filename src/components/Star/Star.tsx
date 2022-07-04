@@ -1,18 +1,18 @@
-import React from "react";
+import React, {FC} from "react";
 
 type StarsPropsType = {
-    value: 0 | 1 | 2 | 3 | 4 | 5
+    value?: 0 | 1 | 2 | 3 | 4 | 5
 }
 
-function Stars (props: StarsPropsType) {
+const Stars:FC<StarsPropsType> =  ({value = 0}) => {
     console.log('Stars render')
         return (
             <div>
-                <Star selected={ props.value > 0 }/>
-                <Star selected={ props.value > 1 }/>
-                <Star selected={ props.value > 2 }/>
-                <Star selected={ props.value > 3 }/>
-                <Star selected={ props.value > 4 }/>
+                <Star selected={ value > 0 }/>
+                <Star selected={ value > 1 }/>
+                <Star selected={ value > 2 }/>
+                <Star selected={ value > 3 }/>
+                <Star selected={ value > 6 }/>
             </div>
         )
 }
